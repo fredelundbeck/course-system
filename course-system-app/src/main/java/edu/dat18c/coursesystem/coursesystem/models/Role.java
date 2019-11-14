@@ -3,8 +3,11 @@ package edu.dat18c.coursesystem.coursesystem.models;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+
+import edu.dat18c.coursesystem.coursesystem.models.enums.RoleType;
 
 /**
  * Role
@@ -14,7 +17,7 @@ import javax.persistence.Table;
 public class Role 
 {
     @Id
-    @GeneratedValue
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private long id;
 
@@ -22,6 +25,11 @@ public class Role
     private String name;
 
     public Role() {}
+
+    public Role(RoleType roleType)
+    {
+        this.id = roleType.getRoleIndex(roleType);
+    }
 
     public long getId() 
     {

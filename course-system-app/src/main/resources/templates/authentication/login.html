@@ -48,6 +48,12 @@
                 <div class="card-header">Login</div>
                 <div class="card-body">
 
+                    <div th:if="${param.error}">
+                        <div class="alert alert-danger" role="alert">
+                            Credentials didn't match, try again. <i class="fas fa-exclamation-triangle"></i>
+                          </div>
+                    </div>
+
                     <form th:action="@{/authenticate}" class="form-signin" method="POST">
 
                         <div class="form-group">

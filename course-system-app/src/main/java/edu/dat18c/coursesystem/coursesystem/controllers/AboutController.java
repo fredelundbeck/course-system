@@ -10,7 +10,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class AboutController 
 {
     @GetMapping(value = "/about")
-    public String getAboutPage() 
+    public String getAboutView() 
     {
         return "home/about";
     }
