@@ -137,7 +137,9 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
+
 INSERT INTO `user` VALUES (1,'Frederik','Lundbeck Jørgensen','Frederiklundbeck@live.dk','$2a$10$ktrYgzd27w4rsOH4t/S8w.wwawW1QqHB8juuZJbxZo4t8Cy6enqOi',3,'2019-11-11 13:00:08');
+
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
