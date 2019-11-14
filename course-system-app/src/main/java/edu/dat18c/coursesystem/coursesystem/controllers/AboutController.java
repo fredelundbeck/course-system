@@ -12,6 +12,6 @@ public class AboutController
     @GetMapping(value = "/about")
     public String getAboutPage() 
     {
-        return "about/about";
+        return "home/about";
     }
 }

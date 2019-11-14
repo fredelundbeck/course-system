@@ -1,5 +1,5 @@
-CREATE DATABASE  IF NOT EXISTS `course_system` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
-USE `course_system`;
+CREATE DATABASE  IF NOT EXISTS `coursesystem` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_bin */;
+USE `coursesystem`;
 -- MySQL dump 10.13  Distrib 8.0.15, for Win64 (x86_64)
 --
 -- Host: localhost    Database: course_system
@@ -44,7 +44,7 @@ CREATE TABLE `course` (
   PRIMARY KEY (`class_code`),
   UNIQUE KEY `id_UNIQUE` (`class_code`),
   UNIQUE KEY `name_UNIQUE` (`name_danish`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -73,7 +73,7 @@ CREATE TABLE `course_teacher` (
   KEY `course_teacher_course_id_fk_idx` (`course_id`),
   CONSTRAINT `course_teacher_course_id_fk` FOREIGN KEY (`course_id`) REFERENCES `course` (`class_code`),
   CONSTRAINT `course_teacher_teacher_id_fk` FOREIGN KEY (`teacher_id`) REFERENCES `user` (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -96,7 +96,7 @@ CREATE TABLE `role` (
   `id` int(1) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -128,7 +128,7 @@ CREATE TABLE `user` (
   UNIQUE KEY `id_UNIQUE` (`id`),
   KEY `user_role_id_fk_idx` (`role_id`),
   CONSTRAINT `user_role_id_fk` FOREIGN KEY (`role_id`) REFERENCES `role` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8 COLLATE=utf8_bin;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -137,7 +137,7 @@ CREATE TABLE `user` (
 
 LOCK TABLES `user` WRITE;
 /*!40000 ALTER TABLE `user` DISABLE KEYS */;
-INSERT INTO `user` VALUES (1,'Frederik','Lundbeck Jørgensen','Frederiklundbeck@live.dk','Lundbeck1993',3,'2019-11-11 13:00:08');
+INSERT INTO `user` VALUES (1,'Frederik','Lundbeck Jørgensen','Frederiklundbeck@live.dk','$2a$10$ktrYgzd27w4rsOH4t/S8w.wwawW1QqHB8juuZJbxZo4t8Cy6enqOi',3,'2019-11-11 13:00:08');
 /*!40000 ALTER TABLE `user` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -150,4 +150,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2019-11-12  7:33:44
+-- Dump completed on 2019-11-12 20:43:14

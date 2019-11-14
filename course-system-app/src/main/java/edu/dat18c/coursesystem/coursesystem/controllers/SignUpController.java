@@ -16,7 +16,7 @@ public class SignUpController
     @GetMapping(value = "/signup")
     public String getSignUpPage()
     {
-        return "signup/signup";
+        return "authentication/signup";
     }
 
     @PostMapping(value = "/signup")

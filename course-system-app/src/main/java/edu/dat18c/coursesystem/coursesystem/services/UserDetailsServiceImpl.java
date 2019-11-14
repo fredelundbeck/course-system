@@ -76,15 +76,15 @@ public class UserDetailsServiceImpl implements UserDetailsService
             public Collection<? extends GrantedAuthority> getAuthorities() 
             {
                 int role_id = (int)optionalUser.get().getRole().getId();
-                
+
                 switch (role_id) 
                 {
                     case 1:
-                        return Collections.singleton(new SimpleGrantedAuthority("STUDENT"));
+                        return Collections.singleton(new SimpleGrantedAuthority("ROLE_STUDENT"));
                     case 2:
-                        return Collections.singleton(new SimpleGrantedAuthority("TEACHER"));
+                        return Collections.singleton(new SimpleGrantedAuthority("ROLE_TEACHER"));
                     case 3:
-                        return Collections.singleton(new SimpleGrantedAuthority("ADMIN"));
+                        return Collections.singleton(new SimpleGrantedAuthority("ROLE_ADMIN"));
                     default:
                         return null;
                 }
