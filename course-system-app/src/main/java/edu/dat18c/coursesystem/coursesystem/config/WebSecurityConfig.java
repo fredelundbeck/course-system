@@ -39,6 +39,9 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
     protected void configure(HttpSecurity http) throws Exception 
     {
         http
+            .csrf()
+                .ignoringAntMatchers("/login", "/logout")
+                .and()
             .authorizeRequests()
                 .antMatchers("/js/**" ,"/css/**", "/images/**", "/", "/about", "/signup").permitAll()
                 .antMatchers("/admin/**").hasRole("ADMIN")
@@ -49,9 +52,11 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
                 .loginProcessingUrl("/authenticate")
                 .defaultSuccessUrl("/", true)
                 .and()
-                .logout()
+            .logout()
                 .logoutUrl("/logout")
-                .deleteCookies("JSESSIONID");
+                .logoutSuccessUrl("/")
+                .deleteCookies("JSESSIONID")
+                .invalidateHttpSession(false);
     }
 
     @Override
