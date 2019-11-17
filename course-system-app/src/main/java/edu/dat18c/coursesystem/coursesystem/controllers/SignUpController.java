@@ -32,7 +32,6 @@ public class SignUpController
         return "authentication/signup";
     }
 
-    //TODO: come up with safer way to handle requestparam for rolevalue
     @PostMapping(value = "/signup")
     public String signUp(@ModelAttribute User user, @RequestParam(required = true, name = "roleValue") int roleValue)
     {
@@ -46,7 +45,6 @@ public class SignUpController
             
             user.setPassword(encodedPassword);
             user.setRole(new Role(roleType));
-
 
             //Save to mysql
             userRepository.save(user);

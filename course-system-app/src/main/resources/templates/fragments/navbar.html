@@ -14,13 +14,17 @@
                 <a class="nav-link" href="/about">About</a>
             </li>
         </ul>
+
+        
         <form th:if="${#authorization.expression('!isAuthenticated()')}" action="/login" method="GET" class="form-inline my-2 my-lg-0">
             <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"><i class="fas fa-sign-in-alt"></i>
                 Login</button>
         </form>
+
         <form th:if="${#authorization.expression('isAuthenticated()')}" action="/logout" method="POST" class="form-inline my-2 my-lg-0">
             <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"><i class="fas fa-sign-in-alt"></i>
                 Logout</button>
         </form>
+
     </div>
 </nav>

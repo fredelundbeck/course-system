@@ -32,7 +32,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
     @Override
     public void configure(WebSecurity web) throws Exception 
     {
-        
+        web.ignoring().antMatchers("/static/**", "/js/**", "/css/**", "/img/**", "/json/**");
     }
 
     @Override
@@ -40,23 +40,25 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
     {
         http
             .csrf()
-                .ignoringAntMatchers("/login", "/logout")
+                .ignoringAntMatchers("/login", "/authenticate_login", "/logout")
                 .and()
             .authorizeRequests()
-                .antMatchers("/js/**" ,"/css/**", "/images/**", "/", "/about", "/signup").permitAll()
+                .antMatchers("/", "/about", "/login", "/authenticate_login", "/signup").permitAll()
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()
             .formLogin()
-                .loginPage("/login").permitAll()
-                .loginProcessingUrl("/authenticate")
+                .loginPage("/login")
+                .loginProcessingUrl("/authenticate_login")
                 .defaultSuccessUrl("/", true)
+                .permitAll()
                 .and()
             .logout()
                 .logoutUrl("/logout")
                 .logoutSuccessUrl("/")
                 .deleteCookies("JSESSIONID")
-                .invalidateHttpSession(false);
+                .invalidateHttpSession(false)
+                .permitAll();
     }
 
     @Override
