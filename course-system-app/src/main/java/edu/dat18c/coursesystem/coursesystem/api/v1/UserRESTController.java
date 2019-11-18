@@ -10,13 +10,13 @@ import org.springframework.web.bind.annotation.RestController;
 import edu.dat18c.coursesystem.coursesystem.models.User;
 import edu.dat18c.coursesystem.coursesystem.services.UserService;
 
-
 /**
- * UserRESTController
+ * A rest controller for the user entity. 
  */
 @RestController
-public class UserRESTController 
+public class UserRestController 
 {
+    /**The base api url for the course entity. https://localhost:8080/api/v1/user */
     private final String BASE_URL = "/api/v1/user";
     
     @Autowired
@@ -28,6 +28,12 @@ public class UserRESTController
         return userService.findAllUsers();
     }
 
+    /**
+     * GET mapping for a specific user, specified by a user id. <p>
+     * Example: <p> localhost:8080/api/v1/user/1
+     * @param id The unique user id.
+     * @return The specified user, if the user exist.
+     */
     @GetMapping(value = BASE_URL + "/{id}")
     public User getUserById(@ModelAttribute(name = "id") long id)
     {
@@ -37,8 +43,6 @@ public class UserRESTController
         {
             return optionalUser.get();    
         }
-
         return null;
     }
-    
 }

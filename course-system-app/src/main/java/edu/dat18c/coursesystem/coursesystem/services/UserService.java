@@ -1,5 +1,7 @@
 package edu.dat18c.coursesystem.coursesystem.services;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +22,34 @@ public class UserService
     public Iterable<User> findAllUsers()
     {
         return userRepository.findAll();
+    }
+
+    public Iterable<User> findAllStudents()
+    {
+        List<User> students = new ArrayList<User>();
+
+        for (User user : userRepository.findAll()) 
+        {
+            if (user.getRole().getName().equals("student")) 
+            {
+                students.add(user);
+            }    
+        }
+        return students;
+    }
+
+    public Iterable<User> findAllTeachers()
+    {
+        List<User> teachers = new ArrayList<>();
+
+        for (User user : userRepository.findAll()) 
+        {
+            if (user.getRole().getName().equals("teacher")) 
+            {
+                teachers.add(user);
+            }    
+        }
+        return teachers;
     }
 
     public boolean emailAlreadyExists(User user)

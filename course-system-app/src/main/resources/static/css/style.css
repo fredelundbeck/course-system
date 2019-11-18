@@ -10,3 +10,11 @@ nav.navbar {
     margin-top: 100px;
     margin-bottom: 100px;
 }
+
+div#errorContainer.container {
+    margin-top: 100px;
+}
+
+a#goBackErrorBtn {
+    margin-top: 20px;
+}
