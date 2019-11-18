@@ -1,4 +1,4 @@
-package edu.dat18c.coursesystem.coursesystem.models.enums;
+package edu.dat18c.coursesystem.models.enums;
 
 public enum RoleType 
 {

@@ -1,4 +1,4 @@
-package edu.dat18c.coursesystem.coursesystem.config;
+package edu.dat18c.coursesystem.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;

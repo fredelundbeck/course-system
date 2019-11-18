@@ -1,4 +1,4 @@
-package edu.dat18c.coursesystem.coursesystem;
+package edu.dat18c.coursesystem;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
