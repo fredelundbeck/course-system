@@ -1,11 +1,11 @@
-package edu.dat18c.coursesystem.coursesystem.models;
+package edu.dat18c.coursesystem.models;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import edu.dat18c.coursesystem.coursesystem.models.enums.RoleType;
+import edu.dat18c.coursesystem.models.enums.RoleType;
 
 /**
  * Role

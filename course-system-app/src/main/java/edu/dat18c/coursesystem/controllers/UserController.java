@@ -1,11 +1,11 @@
-package edu.dat18c.coursesystem.coursesystem.controllers;
+package edu.dat18c.coursesystem.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 
-import edu.dat18c.coursesystem.coursesystem.repositories.UserRepository;
+import edu.dat18c.coursesystem.repositories.UserRepository;
 
 /**
  * UserController

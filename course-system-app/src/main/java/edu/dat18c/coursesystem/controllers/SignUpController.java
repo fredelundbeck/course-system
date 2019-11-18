@@ -1,4 +1,4 @@
-package edu.dat18c.coursesystem.coursesystem.controllers;
+package edu.dat18c.coursesystem.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import edu.dat18c.coursesystem.coursesystem.models.Role;
-import edu.dat18c.coursesystem.coursesystem.models.User;
-import edu.dat18c.coursesystem.coursesystem.models.enums.RoleType;
-import edu.dat18c.coursesystem.coursesystem.repositories.UserRepository;
+import edu.dat18c.coursesystem.models.Role;
+import edu.dat18c.coursesystem.models.User;
+import edu.dat18c.coursesystem.models.enums.RoleType;
+import edu.dat18c.coursesystem.repositories.UserRepository;
 
 /**
  * SignUpController

@@ -1,12 +1,12 @@
-package edu.dat18c.coursesystem.coursesystem.services;
+package edu.dat18c.coursesystem.services;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import edu.dat18c.coursesystem.coursesystem.models.Course;
-import edu.dat18c.coursesystem.coursesystem.repositories.CourseRepository;
+import edu.dat18c.coursesystem.models.Course;
+import edu.dat18c.coursesystem.repositories.CourseRepository;
 
 /**
  * CourseService

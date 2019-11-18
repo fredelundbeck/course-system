@@ -1,4 +1,4 @@
-package edu.dat18c.coursesystem.coursesystem.models;
+package edu.dat18c.coursesystem.models;
 
 import java.sql.Date;
 import java.util.Set;

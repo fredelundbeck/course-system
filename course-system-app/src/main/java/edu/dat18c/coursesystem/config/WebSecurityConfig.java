@@ -1,4 +1,4 @@
-package edu.dat18c.coursesystem.coursesystem.config;
+package edu.dat18c.coursesystem.config;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
@@ -11,7 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.WebSecur
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
-import edu.dat18c.coursesystem.coursesystem.services.UserDetailsServiceImpl;
+import edu.dat18c.coursesystem.services.UserDetailsServiceImpl;
 
 /**
  * WebSecurityConfig

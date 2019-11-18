@@ -1,4 +1,4 @@
-package edu.dat18c.coursesystem.coursesystem.controllers;
+package edu.dat18c.coursesystem.controllers;
 
 import org.springframework.stereotype.Controller;
 

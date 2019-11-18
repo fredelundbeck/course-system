@@ -1,4 +1,4 @@
-package edu.dat18c.coursesystem.coursesystem.services;
+package edu.dat18c.coursesystem.services;
 
 import java.util.Optional;
 
@@ -8,9 +8,9 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import edu.dat18c.coursesystem.coursesystem.models.User;
-import edu.dat18c.coursesystem.coursesystem.models.UserDetailsImpl;
-import edu.dat18c.coursesystem.coursesystem.repositories.UserRepository;
+import edu.dat18c.coursesystem.models.User;
+import edu.dat18c.coursesystem.models.UserDetailsImpl;
+import edu.dat18c.coursesystem.repositories.UserRepository;
 
 /**
  * UserDetailsService

@@ -1,4 +1,4 @@
-package edu.dat18c.coursesystem.coursesystem.services;
+package edu.dat18c.coursesystem.services;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -7,8 +7,8 @@ import java.util.Optional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import edu.dat18c.coursesystem.coursesystem.models.User;
-import edu.dat18c.coursesystem.coursesystem.repositories.UserRepository;
+import edu.dat18c.coursesystem.models.User;
+import edu.dat18c.coursesystem.repositories.UserRepository;
 
 /**
  * UserService

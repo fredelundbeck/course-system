@@ -1,11 +1,11 @@
-package edu.dat18c.coursesystem.coursesystem.api.v1;
+package edu.dat18c.coursesystem.api.v1;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import edu.dat18c.coursesystem.coursesystem.models.User;
-import edu.dat18c.coursesystem.coursesystem.services.UserService;
+import edu.dat18c.coursesystem.models.User;
+import edu.dat18c.coursesystem.services.UserService;
 
 
 /**

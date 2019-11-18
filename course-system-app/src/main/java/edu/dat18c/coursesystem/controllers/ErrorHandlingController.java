@@ -1,4 +1,4 @@
-package edu.dat18c.coursesystem.coursesystem.controllers;
+package edu.dat18c.coursesystem.controllers;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.http.HttpServletRequest;

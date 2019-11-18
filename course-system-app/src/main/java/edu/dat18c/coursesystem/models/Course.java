@@ -1,4 +1,4 @@
-package edu.dat18c.coursesystem.coursesystem.models;
+package edu.dat18c.coursesystem.models;
 
 import java.util.Set;
 

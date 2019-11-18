@@ -1,8 +1,8 @@
-package edu.dat18c.coursesystem.coursesystem.repositories;
+package edu.dat18c.coursesystem.repositories;
 
 import org.springframework.data.repository.CrudRepository;
 
-import edu.dat18c.coursesystem.coursesystem.models.Role;
+import edu.dat18c.coursesystem.models.Role;
 
 /**
  * RoleRepository
