@@ -21,5 +21,5 @@ public class UserController
     {
         model.addAttribute("users", userRepository.findAll());
         return "admin/users";
-    }    
+    }
 }

@@ -29,7 +29,4 @@ public class CourseController
         model.addAttribute("teachers", courseRepository.findById("WD-2020-F-NODEJS").get().getTeachers());
         return "test";
     }
-    
-    
-    
 }

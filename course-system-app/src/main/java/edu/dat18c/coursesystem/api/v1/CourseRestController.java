@@ -10,7 +10,6 @@ import org.springframework.web.bind.annotation.RestController;
 import edu.dat18c.coursesystem.models.Course;
 import edu.dat18c.coursesystem.services.CourseService;
 
-
 /**
  * A rest controller for the course entity.
  */
