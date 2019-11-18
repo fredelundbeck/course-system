@@ -10,6 +10,8 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 /**
  * Course
  */
@@ -66,6 +68,7 @@ public class Course
     @Column(name = "exam_form")
     private String examForm;
 
+    @JsonManagedReference
     @ManyToMany
     @JoinTable(
         name = "course_teacher",

@@ -17,14 +17,18 @@ public class UserService
     @Autowired
     private UserRepository userRepository;
 
+    public Iterable<User> findAllUsers()
+    {
+        return userRepository.findAll();
+    }
+
     public boolean emailAlreadyExists(User user)
     {
         return userRepository.existsByEmail(user.getEmail());
     }
 
-    public User findById(long id)
+    public Optional<User> findById(long id)
     {
-        Optional<User> userOptional = userRepository.findById(id);
-        return userOptional.get();
+        return userRepository.findById(id);
     }
 }

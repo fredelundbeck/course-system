@@ -43,7 +43,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter
                 .ignoringAntMatchers("/login", "/authenticate_login", "/logout")
                 .and()
             .authorizeRequests()
-                .antMatchers("/", "/about", "/login", "/authenticate_login", "/signup").permitAll()
+                .antMatchers(/*"/api/**",*/ "/", "/about", "/login", "/authenticate_login", "/signup").permitAll()
                 .antMatchers("/admin/**").hasRole("ADMIN")
                 .anyRequest().authenticated()
                 .and()

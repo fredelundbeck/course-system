@@ -14,6 +14,9 @@ import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 /**
  * User
  */
@@ -34,6 +37,7 @@ public class User
     @Column(name = "email")
     private String email;
 
+    @JsonIgnore
     @Column(name = "password")
     private String password;
 
@@ -44,6 +48,7 @@ public class User
     @JoinColumn(name = "role_id")
     private Role role;
 
+    @JsonBackReference
     @ManyToMany
     @JoinTable(
         name = "course_teacher",
