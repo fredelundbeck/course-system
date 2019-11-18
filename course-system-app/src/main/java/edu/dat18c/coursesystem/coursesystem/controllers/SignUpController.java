@@ -35,6 +35,9 @@ public class SignUpController
     @PostMapping(value = "/signup")
     public String signUp(@ModelAttribute User user, @RequestParam(required = true, name = "roleValue") int roleValue)
     {
+        //Set email to lowercase
+        user.setEmail(user.getEmail().toLowerCase());
+
         if (!userRepository.existsByEmail(user.getEmail())) 
         {
             //Encode the raw text password with the bCrypt hashing algorithm

@@ -1,26 +1,25 @@
 package edu.dat18c.coursesystem.coursesystem.models;
 
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Set;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 /**
  * Course
  */
-@Entity(name = "Course")
+@Entity
 @Table(name = "course")
 public class Course 
 {
     @Id
-    @Column(name = "course_code")
-    private String courseCode;
+    @Column(name = "class_code")
+    private String classCode;
 
     @Column(name = "name_danish")
     private String nameDanish;
@@ -67,10 +66,13 @@ public class Course
     @Column(name = "exam_form")
     private String examForm;
 
-    @OneToMany(cascade = CascadeType.ALL, 
-               orphanRemoval = true)
-    @JoinColumn(name = "user_id")
-    private List<User> teachers = new ArrayList<>();
+    @ManyToMany
+    @JoinTable(
+        name = "course_teacher",
+        joinColumns = @JoinColumn(name = "course_id"),
+        inverseJoinColumns = @JoinColumn(name = "teacher_id")
+    )
+    private Set<User> teachers;
 
 
     public Course() 
@@ -78,14 +80,14 @@ public class Course
         
     }
 
-    public String getCourseCode() 
+    public String getClassCode() 
     {
-        return courseCode;
+        return classCode;
     }
 
-    public void setCourseCode(String courseCode) 
+    public void setClassCode(String classCode) 
     {
-        this.courseCode = courseCode;
+        this.classCode = classCode;
     }
 
     public String getNameDanish() 
@@ -238,12 +240,12 @@ public class Course
         this.examForm = examForm;
     }
 
-    public List<User> getTeachers() 
+    public Set<User> getTeachers() 
     {
         return teachers;
     }
 
-    public void setTeachers(List<User> teachers) 
+    public void setTeachers(Set<User> teachers) 
     {
         this.teachers = teachers;
     }
@@ -251,7 +253,7 @@ public class Course
     @Override
     public String toString() 
     {
-        return String.format("[Course (Course_Code: %s)]", this.courseCode);    
+        return String.format("[Course (ClassCode: %s)]", this.classCode);    
     }
 
     @Override
@@ -268,6 +270,6 @@ public class Course
         }
 
         Course course = (Course)obj;
-        return this.courseCode == course.courseCode;
+        return this.classCode == course.classCode;
     }
 }

@@ -9,13 +9,31 @@
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+        <!--Navbar elements-->
         <ul class="navbar-nav mr-auto">
+
             <li class="nav-item">
                 <a class="nav-link" href="/about">About</a>
             </li>
+            
+            <!-- Admin dropdown menu -->
+            <li sec:authorize="hasRole('ADMIN')" class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    Admin
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="/admin/users">Users</a>
+                    <a class="dropdown-item" href="/admin/courses">Courses</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="/admin/statistics">Statistics</a>
+                </div>
+            </li>
+
         </ul>
 
-        
+        <!-- Left side of navbar -->
         <form th:if="${#authorization.expression('!isAuthenticated()')}" action="/login" method="GET" class="form-inline my-2 my-lg-0">
             <button class="btn btn-outline-dark my-2 my-sm-0" type="submit"><i class="fas fa-sign-in-alt"></i>
                 Login</button>

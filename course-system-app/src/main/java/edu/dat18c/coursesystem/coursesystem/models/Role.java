@@ -12,12 +12,11 @@ import edu.dat18c.coursesystem.coursesystem.models.enums.RoleType;
 /**
  * Role
  */
-@Entity(name = "Role")
+@Entity
 @Table(name = "role")
 public class Role 
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private long id;
 

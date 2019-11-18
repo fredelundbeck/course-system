@@ -1,6 +1,7 @@
 package edu.dat18c.coursesystem.coursesystem.models;
 
 import java.sql.Date;
+import java.util.Set;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -8,18 +9,19 @@ import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
+import javax.persistence.JoinTable;
+import javax.persistence.ManyToMany;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 
 /**
  * User
  */
-@Entity(name = "User")
+@Entity
 @Table(name = "user")
 public class User
 {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private long id;
 
@@ -41,6 +43,14 @@ public class User
     @OneToOne
     @JoinColumn(name = "role_id")
     private Role role;
+
+    @ManyToMany
+    @JoinTable(
+        name = "course_teacher",
+        joinColumns = @JoinColumn(name = "teacher_id"),
+        inverseJoinColumns = @JoinColumn(name = "course_id")
+    )
+    private Set<Course> courses;
 
     public User() {}
 
@@ -112,6 +122,15 @@ public class User
     public void setRole(Role role) 
     {
         this.role = role;
+    }
+
+    
+    public Set<Course> getCourses() {
+        return courses;
+    }
+
+    public void setCourses(Set<Course> courses) {
+        this.courses = courses;
     }
 
     @Override

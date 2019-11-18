@@ -9,7 +9,7 @@ import edu.dat18c.coursesystem.coursesystem.models.Course;
  * CourseRepository
  */
 @Repository
-public interface CourseRepository extends CrudRepository<Course, Long> 
+public interface CourseRepository extends CrudRepository<Course, String> 
 {
 
     
