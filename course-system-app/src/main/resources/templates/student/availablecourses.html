@@ -1,12 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>CourseSystem | Courses</title>
+
+    <!--Stylesheets fragment-->
+    <div th:insert="fragments/stylesheets :: stylesheets"></div>
 </head>
+
 <body>
-    
+    <!--Navbar fragment-->
+    <div th:insert="fragments/navbar :: navbar"></div>
+
+    <div class="container">
+
+        <h1 class="display-3">Courses</h1>
+        
+    </div>
+
+    <!--Footer fragment-->
+    <div th:insert="fragments/footer :: footer"></div>
+
+    <!--Bootstrap, jQuery popper scripts-->
+    <div th:insert="fragments/scripts :: scripts"></div>
 </body>
+
 </html>
