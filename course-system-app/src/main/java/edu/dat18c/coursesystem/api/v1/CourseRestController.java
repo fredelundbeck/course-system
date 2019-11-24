@@ -29,7 +29,7 @@ public class CourseRestController
     @GetMapping(value = BASE_URL)
     public Iterable<Course> getAllCourses() 
     {
-        return courseService.findAllUsers();
+        return courseService.getAllCourses();
     }
 
     /**
@@ -41,7 +41,7 @@ public class CourseRestController
     @GetMapping(value = BASE_URL + "/{id}")
     public Course getCourseById(@ModelAttribute(name = "id") String id) 
     {
-        Optional<Course> optionalCourse = courseService.findByCourseCode(id);
+        Optional<Course> optionalCourse = courseService.getByCourseCode(id);
 
         if (optionalCourse.isPresent()) 
         {

@@ -1,11 +1,11 @@
 package edu.dat18c.coursesystem.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PostMapping;
 
-import edu.dat18c.coursesystem.models.Course;
+import edu.dat18c.coursesystem.services.CourseService;
 
 /**
  * AvailableCoursesController
@@ -13,15 +13,13 @@ import edu.dat18c.coursesystem.models.Course;
 @Controller
 public class AvailableCoursesController
 {
-    @GetMapping(value = "/courses")
-    public String getAvailableCoursesView() 
-    {
-        return "student/availablecourses"; 
-    }
+    @Autowired
+    private CourseService courseService;
 
-    @PostMapping(value = "/courses")
-    public String postNewCourse(@ModelAttribute Course course)
+    @GetMapping(value = "/courses")
+    public String getAvailableCoursesView(Model model) 
     {
-        return "redirect:/courses";
+        model.addAttribute("courses", courseService.getAllCourses());
+        return "student/availablecourses"; 
     }
 }

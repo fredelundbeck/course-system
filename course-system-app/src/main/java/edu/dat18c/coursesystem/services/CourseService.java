@@ -17,12 +17,12 @@ public class CourseService
     @Autowired
     private CourseRepository courseRepository;
     
-    public Iterable<Course> findAllUsers()
+    public Iterable<Course> getAllCourses()
     {
         return courseRepository.findAll();
     }
 
-    public Optional<Course> findByCourseCode(String courseCode)
+    public Optional<Course> getByCourseCode(String courseCode)
     {
         return courseRepository.findById(courseCode);
     }
