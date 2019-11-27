@@ -20,6 +20,6 @@ public class AvailableCoursesController
     public String getAvailableCoursesView(Model model) 
     {
         model.addAttribute("courses", courseService.getAllCourses());
-        return "student/availablecourses"; 
+        return "services/availablecourses"; 
     }
 }

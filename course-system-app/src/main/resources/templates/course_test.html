@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CourseSystem</title>
+
+    <!--Bootstrap css-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/course.css">
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="/">
+            <i class="fas fa-graduation-cap fa-lg"></i>
+            CourseSystem
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+            <!--Navbar elements-->
+            <ul class="navbar-nav mr-auto">
+
+                <!-- If authorized / logged in -->
+                <li class="nav-item">
+                    <a href="/courses" class="nav-link">Courses</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link" href="/about">About</a>
+                </li>
+
+                <!-- Admin dropdown menu -->
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Admin
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="/admin/users">Users</a>
+                        <a class="dropdown-item" href="/admin/courses">Courses</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="/admin/statistics">Statistics</a>
+                    </div>
+                </li>
+
+            </ul>
+
+            <form action="/logout" method="POST" class="form-inline my-2 my-lg-0">
+                <a class="btn btn-outline-dark my-2 my-sm-0" data-toggle="modal" data-target="#logoutModal"><i
+                        class="fas fa-sign-in-alt"></i>
+                    Logout</a>
+
+                <!-- Logout Modal -->
+                <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel"
+                    aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="logoutModalLabel">Logout</h5>
+                                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                Are you sure you want to logout?
+                            </div>
+                            <div class="modal-footer">
+                                <button type="submit" class="btn btn-secondary">Logout</button>
+                                <button type="button" class="btn btn-primary" data-dismiss="modal">Cancel</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </nav>
+
+
+    <!-- test -->
+    <div class="container">
+        <div class="row title-row">
+            <div class="col border rounded bg-light">
+                <span class="display-4">Fullstack NodeJs</span>
+                <span class="badge badge-pill badge-primary course-title-badge">New</span>
+            </div>
+        </div>
+
+        <div class="row info-row">
+            <div class="col-9 border rounded left-info-column overflow-auto"></div>
+
+            <div class="col-3 right-info-column">
+                <div class="card">
+
+                    <div class="card-header">
+                        Course Information
+                    </div>
+
+                    <div class="information">
+                        <h5 class="">class code</h5>
+                        <div class="info">WD-2020-F-NODEJS</div>
+                    </div>
+
+                    <div class="information">
+                        <h5 class="">name</h5>
+                        <div class="info">Fullstack NodeJs</div>
+                    </div>
+
+                    <div class="information">
+                        <h5 class="">programme</h5>
+                        <div class="info">Web development</div>
+                    </div>
+                    <div class="information">
+                        <h5 class="">semester</h5>
+                        <div class="info">3</div>
+                    </div>
+
+                    <div class="information">
+                        <h5 class="">mandatory</h5>
+                        <div class="info">Yes</div>
+                    </div>
+
+                    <div class="information">
+                        <h5 class="">ects</h5>
+                        <div class="info">10</div>
+                    </div>
+
+                    <div class="information">
+                        <h5 class="">language</h5>
+                        <div class="info">English</div>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+        <button type="button" class="btn btn-primary"></button>
+    </div>
+
+    <!--scripts-->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <!--Font awesome script-->
+    <script src="https://kit.fontawesome.com/64979d9474.js" crossorigin="anonymous"></script>
+
+</body>
+
+</html>

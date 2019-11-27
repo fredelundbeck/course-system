@@ -1,0 +1,41 @@
+.course-title-badge {
+    position: relative;
+    top: -28px
+}
+
+.title-row {
+    margin-bottom: 0.75em;
+}
+
+.information {
+    padding-left: 1em;
+
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+}
+
+.information h5 {
+    margin-bottom: 0.1em;
+}
+
+.information .info {
+    
+}
+
+.info-row {
+   
+}
+
+.information-column {
+    padding-top: 0.5em;
+}
+
+.left-info-column {
+
+    padding-top: 1em;
+    padding-right: 1em;
+}
+
+.right-info-column {
+    
+}

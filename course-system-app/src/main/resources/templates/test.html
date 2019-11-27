@@ -13,6 +13,7 @@
 
     <!--Own stylesheet-->
     <link rel="stylesheet" href="../static/css/style.css" />
+    <link rel="stylesheet" href="../static/css/availablecourses.css" />
 
 </head>
 
@@ -90,99 +91,275 @@
 
     <!-- test area -->
 
-    <div class="container course-card-container">
+    <div class="main-container">
 
-        <h1 class="display-3" style="">Courses</h1>
+        <div class="header-container">
 
-        <div class="course-card-body">
-
-            <div class="course-card-info">
-                <h6 class="course-card-type text-primary">Web development</h6>
-                <div class="course-card-title">Fullstack NodeJs</div>
-
-                <span class="course-card-ects">75 ects</span>
-
-                <div class="course-card-seperator"></div>
-
-                <div class="course-card-description">
-                    This course is very good! you should sign up now and get 50% off
-                </div>
-
-                <a class="course-card-goto" href="#">See more</a>
-            </div>
-
-            <img class="course-card-image"
-                src="https://www.umbrellaconsultants.com/files/resources/outer-banks-web-development-hosting.jpg"
-                alt="">
         </div>
 
-        <div class="course-card-body">
-            <div class="course-card-info">
+        <div class="body-container">
+            <div class="left-container">
+                <nav id="scroll" class="category-link-container bg-light border shadow-sm rounded">
 
-                <h6 class="course-card-type text-primary">Web development</h6>
-                <div class="course-card-title">Fullstack NodeJs</div>
+                    <div class="categories-title-text">Course categories</div>
+                    <div class="menu-seperator"></div>
 
-                <span class="course-card-ects">75 ects</span>
-
-                <div class="course-card-seperator"></div>
-
-                <div class="course-card-description">
-                    This course is very good! you should sign up now and get 50% off
-                </div>
-
-                <a class="course-card-goto" href="#">See more</a>
+                    <nav class="nav nav-pills flex-column categories-list">
+                        <a class="category-link" href="#webdev">Web Development</a>
+                        <a class="category-link" href="#appdev">App Development</a>
+                        <a class="category-link" href="#design">Design</a>
+                        <a class="category-link" href="#project">Project management</a>
+                        <a class="category-link" href="#security">Security</a>
+                    </nav>
+                </nav>
+                </nav>
             </div>
 
-            <img class="course-card-image"
-                src="https://www.umbrellaconsultants.com/files/resources/outer-banks-web-development-hosting.jpg"
-                alt="">
-        </div>
+            <div class="right-container border shadow-sm">
+                <div data-spy="scroll" data-target="#scroll" data-offset="0">
 
-        <div class="course-card-body">
-            <div class="course-card-info">
 
-                <h6 class="course-card-type text-primary">Web development</h6>
-                <div class="course-card-title">Fullstack NodeJs</div>
+                    <h6 id="webdev" class="display-4">Web development courses</h6>
 
-                <span class="course-card-ects">75 ects</span>
+                    <div class="course-container">
+                        <div class="course-card-body">
+                            <div class="course-card-info">
 
-                <div class="course-card-seperator"></div>
+                                <h6 class="course-card-type text-primary">Web development</h6>
+                                <div class="course-card-title">Fullstack NodeJs</div>
 
-                <div class="course-card-description">
-                    This course is very good! you should sign up now and get 50% off
+                                <span class="course-card-ects">75 ects</span>
+
+                                <div class="course-card-seperator"></div>
+
+                                <div class="course-card-description">
+                                    This course is very good! you should sign up now and get 50% off
+                                </div>
+
+                                <a class="course-card-goto" href="#">See more</a>
+                            </div>
+
+                            <img class="course-card-image"
+                                src="https://www.umbrellaconsultants.com/files/resources/outer-banks-web-development-hosting.jpg"
+                                alt="">
+                        </div>
+                        <div class="course-card-body">
+                            <div class="course-card-info">
+                                <h6 class="course-card-type text-primary">Web development</h6>
+                                <div class="course-card-title">Fullstack NodeJs</div>
+                                <span class="course-card-ects">75 ects</span>
+                                <div class="course-card-seperator"></div>
+                                <div class="course-card-description">
+                                    This course is very good! you should sign up now and get 50% off
+                                </div>
+                                <a class="course-card-goto" href="#">See more</a>
+                            </div>
+                            <img class="course-card-image"
+                                src="https://www.umbrellaconsultants.com/files/resources/outer-banks-web-development-hosting.jpg"
+                                alt="">
+                        </div>
+                        <div class="course-card-body">
+                            <div class="course-card-info">
+                                <h6 class="course-card-type text-primary">Web development</h6>
+                                <div class="course-card-title">Fullstack NodeJs</div>
+                                <span class="course-card-ects">75 ects</span>
+                                <div class="course-card-seperator"></div>
+                                <div class="course-card-description">
+                                    This course is very good! you should sign up now and get 50% off
+                                </div>
+                                <a class="course-card-goto" href="#">See more</a>
+                            </div>
+                            <img class="course-card-image"
+                                src="https://www.umbrellaconsultants.com/files/resources/outer-banks-web-development-hosting.jpg"
+                                alt="">
+                        </div>
+                    </div>
+
+                    <h4 id="appdev" class="display-4">App development courses</h4>
+
+                    <div class="course-container">
+                        <div class="course-card-body">
+                            <div class="course-card-info">
+
+                                <h6 class="course-card-type text-success">App development</h6>
+                                <div class="course-card-title">Fullstack NodeJs</div>
+
+                                <span class="course-card-ects">75 ects</span>
+
+                                <div class="course-card-seperator"></div>
+
+                                <div class="course-card-description">
+                                    This course is very good! you should sign up now and get 50% off
+                                </div>
+
+                                <a class="course-card-goto" href="#">See more</a>
+                            </div>
+
+                            <img class="course-card-image"
+                                src="https://techcrunch.com/wp-content/uploads/2017/01/messaging-apps.jpg?w=1390&crop=1"
+                                alt="">
+                        </div>
+                        <div class="course-card-body">
+                            <div class="course-card-info">
+                                <h6 class="course-card-type text-success">App development</h6>
+                                <div class="course-card-title">Fullstack NodeJs</div>
+                                <span class="course-card-ects">75 ects</span>
+                                <div class="course-card-seperator"></div>
+                                <div class="course-card-description">
+                                    This course is very good! you should sign up now and get 50% off
+                                </div>
+                                <a class="course-card-goto" href="#">See more</a>
+                            </div>
+                            <img class="course-card-image"
+                                src="https://techcrunch.com/wp-content/uploads/2017/01/messaging-apps.jpg?w=1390&crop=1"
+                                alt="">
+                        </div>
+                        <div class="course-card-body">
+                            <div class="course-card-info">
+                                <h6 class="course-card-type text-success">App development</h6>
+                                <div class="course-card-title">Fullstack NodeJs</div>
+                                <span class="course-card-ects">75 ects</span>
+                                <div class="course-card-seperator"></div>
+                                <div class="course-card-description">
+                                    This course is very good! you should sign up now and get 50% off
+                                </div>
+                                <a class="course-card-goto" href="#">See more</a>
+                            </div>
+                            <img class="course-card-image"
+                                src="https://techcrunch.com/wp-content/uploads/2017/01/messaging-apps.jpg?w=1390&crop=1"
+                                alt="">
+                        </div>
+
+                        <div class="course-card-body">
+                            <div class="course-card-info">
+                                <h6 class="course-card-type text-success">App development</h6>
+                                <div class="course-card-title">Fullstack NodeJs</div>
+                                <span class="course-card-ects">75 ects</span>
+                                <div class="course-card-seperator"></div>
+                                <div class="course-card-description">
+                                    This course is very good! you should sign up now and get 50% off
+                                </div>
+                                <a class="course-card-goto" href="#">See more</a>
+                            </div>
+                            <img class="course-card-image"
+                                src="https://techcrunch.com/wp-content/uploads/2017/01/messaging-apps.jpg?w=1390&crop=1"
+                                alt="">
+                        </div>
+                    </div>
+
+                    <h4 id="design" class="display-4">Design courses</h4>
+
+                    <div class="course-container">
+                        <div class="course-card-body">
+                            <div class="course-card-info">
+                                <h6 class="course-card-type text-primary">Web development</h6>
+                                <div class="course-card-title">Fullstack NodeJs</div>
+                                <span class="course-card-ects">75 ects</span>
+                                <div class="course-card-seperator"></div>
+                                <div class="course-card-description">
+                                    This course is very good! you should sign up now and get 50% off
+                                </div>
+                                <a class="course-card-goto" href="#">See more</a>
+                            </div>
+                            <img class="course-card-image"
+                                src="https://www.umbrellaconsultants.com/files/resources/outer-banks-web-development-hosting.jpg"
+                                alt="">
+                        </div>
+                    </div>
+
+
+                    <h4 id="project" class="display-4">Project management courses</h4>
+
+                    <h4 id="security" class="display-4">Security courses</h4>
+
+
                 </div>
-
-                <a class="course-card-goto" href="#">See more</a>
             </div>
 
-            <img class="course-card-image"
-                src="https://www.umbrellaconsultants.com/files/resources/outer-banks-web-development-hosting.jpg"
-                alt="">
-        </div>
 
-        <div class="course-card-body">
-            <div class="course-card-info">
-
-                <h6 class="course-card-type text-primary">Web development</h6>
-                <div class="course-card-title">Fullstack NodeJs</div>
-
-                <span class="course-card-ects">75 ects</span>
-
-                <div class="course-card-seperator"></div>
-
-                <div class="course-card-description">
-                    This course is very good! you should sign up now and get 50% off
-                </div>
-
-                <a class="course-card-goto" href="#">See more</a>
-            </div>
-
-            <img class="course-card-image"
-                src="https://www.umbrellaconsultants.com/files/resources/outer-banks-web-development-hosting.jpg"
-                alt="">
         </div>
 
     </div>
+
+
+    <!--
+    <div class="container course-card-container">
+
+        
+        
+            
+        </div>
+
+        
+        <div class="course-card-body">
+
+            <div class="course-card-info">
+                <h6 class="course-card-type text-primary">Web development</h6>
+                <div class="course-card-title">Fullstack NodeJs</div>
+
+                <span class="course-card-ects">75 ects</span>
+
+                <div class="course-card-seperator"></div>
+
+                <div class="course-card-description">
+                    This course is very good! you should sign up now and get 50% off
+                </div>
+
+                <a class="course-card-goto" href="#">See more</a>
+            </div>
+
+            <img class="course-card-image"
+                src="https://www.umbrellaconsultants.com/files/resources/outer-banks-web-development-hosting.jpg"
+                alt="">
+        </div>
+
+        <div class="course-card-body">
+            <div class="course-card-info">
+
+                <h6 class="course-card-type text-primary">Web development</h6>
+                <div class="course-card-title">Fullstack NodeJs</div>
+
+                <span class="course-card-ects">75 ects</span>
+
+                <div class="course-card-seperator"></div>
+
+                <div class="course-card-description">
+                    This course is very good! you should sign up now and get 50% off
+                </div>
+
+                <a class="course-card-goto" href="#">See more</a>
+            </div>
+
+            <img class="course-card-image"
+                src="https://www.umbrellaconsultants.com/files/resources/outer-banks-web-development-hosting.jpg"
+                alt="">
+        </div>
+
+        <div class="course-card-body">
+            <div class="course-card-info">
+
+                <h6 class="course-card-type text-primary">Web development</h6>
+                <div class="course-card-title">Fullstack NodeJs</div>
+
+                <span class="course-card-ects">75 ects</span>
+
+                <div class="course-card-seperator"></div>
+
+                <div class="course-card-description">
+                    This course is very good! you should sign up now and get 50% off
+                </div>
+
+                <a class="course-card-goto" href="#">See more</a>
+            </div>
+
+            <img class="course-card-image"
+                src="https://www.umbrellaconsultants.com/files/resources/outer-banks-web-development-hosting.jpg"
+                alt="">
+        </div> 
+
+        
+
+    </div>-->
 
 
 

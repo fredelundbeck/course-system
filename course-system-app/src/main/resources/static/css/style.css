@@ -3,12 +3,13 @@ nav.navbar {
     box-shadow: 0px -5px 20px 0px black;
     padding-left: 30px;
     padding-right: 30px;
+    margin-bottom: 1em;
 }
 
 .card#loginCard {
     min-width: 400px;
-    margin-top: 100px;
-    margin-bottom: 100px;
+    margin-top: 70px;
+    margin-bottom: 60px;
 }
 
 div#errorContainer.container {
@@ -24,7 +25,6 @@ a#goBackErrorBtn {
 }
 
 .course-card-body {
-    float:left;
     display: flex; 
     margin: 0.8em;
     background-color: rgb(232, 237, 238);
