@@ -47,7 +47,7 @@ public class CourseController
         return "admin/course/course_edit";
     }
 
-    @PostMapping(value="/admin/courses/delete/{id}")
+    @GetMapping(value="/admin/courses/delete/{id}")
     public String deleteCourse(@PathVariable String id) 
     {
         courseRepository.deleteById(id);

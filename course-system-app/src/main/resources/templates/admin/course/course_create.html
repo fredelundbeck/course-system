@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,13 +11,209 @@
     <div th:insert="fragments/stylesheets :: stylesheets"></div>
 
 </head>
+
 <body>
 
     <!--Navbar fragment-->
     <div th:insert="fragments/navbar :: navbar"></div>
-    
-    
-    
+
+
+    <div class="container">
+        <!--Header row-->
+        <div class="row">
+            <div class="col">
+                <h1 class="display-4">Create course</h1>
+                <hr>
+            </div>
+        </div>
+
+        <form th:action="@{/admin/courses/create}" method="post">
+
+            <!--Course code input input row -->
+            <div class="row">
+                <!--Course code column-->
+                <div class="col-6">
+
+                    <div class="form-group">
+                        <label for="courseCodeInput">Course code</label>
+                        <input type="text" class="form-control" id="courseCodeInput" placeholder="Course code"
+                            name="classCode" required>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <!--Course names input row-->
+            <div class="row">
+                <div class="col">
+
+                    <div class="form-group">
+                        <label for="courseNameEnglish">Name (english)</label>
+                        <input type="text" class="form-control" id="courseNameEnglish"
+                            placeholder="English name for the course." name="nameEnglish" required>
+                    </div>
+
+                </div>
+
+                <div class="col">
+
+                    <div class="form-group">
+                        <label for="courseCodeDanish">Name (danish)</label>
+                        <input type="text" class="form-control" id="courseCodeDanish"
+                            placeholder="Danish name for the course." name="nameDanish" required>
+                    </div>
+
+                </div>
+            </div>
+
+            <!--Study programme, language, Semester & Ects input row -->
+            <div class="row">
+                <div class="col-6">
+                    <label for="studyProgrammeInput">Study programme</label>
+                    <input type="text" class="form-control" id="studyProgrammeInput"
+                        placeholder="Web development, App development" name="studyProgramme" required>
+                </div>
+                <div class="col-2">
+                    <label for="languageInput">Language</label>
+                    <select class="custom-select" id="languageInput" name="language" required>
+                        <option value="danish">Danish</option>
+                        <option value="english">English</option>
+                    </select>
+                </div>
+
+                <!--Semester column-->
+                <div class="col-2">
+
+                    <div class="form-group">
+                        <label for="semesterInput">Semester</label>
+                        <select class="custom-select" id="semesterInput" name="semester" required>
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <!--Ects column-->
+                <div class="col-2">
+
+                    <div class="form-group">
+                        <label for="ectsInput">Ects</label>
+                        <input type="number" class="form-control" id="ectsInput" min="0" max="100" placeholder="0"
+                            name="ects" required>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <hr>
+
+            <!--Students and descriptions input row-->
+            <div class="row">
+
+                <!--Student column -->
+                <div class="col-2">
+                    <h4 class="font-weight-light">Student info</h4>
+                    <hr>
+                    <!--Student min-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="minStudentsInput">Minimum</label>
+                                <input type="number" class="form-control" id="minStudentsInput" min="1" max="100"
+                                    placeholder="1" name="minimumStudents" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Student max-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="maximumStudentsInput">Maximum</label>
+                                <input type="number" class="form-control" id="maximumStudentsInput" min="1" max="100"
+                                    placeholder="100" name="maximumStudents" required>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--Student excepted-->
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="expectedStudentsInput">Expected</label>
+                                <input type="number" class="form-control" id="expectedStudentsInput" min="1" max="100"
+                                    placeholder="50" name="expectedStudents" required>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!--Descriptions column-->
+                <div class="col">
+                    <h4 class="font-weight-light">Description info</h4>
+                    <hr>
+
+                    <div class="row">
+                        <!--prerequisites-->
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="prerequisitesInput">Prerequisites</label>
+                                <textarea class="form-control" id="prerequisitesInput" rows="8"
+                                    placeholder="What are the prerequisites for the course?" name="prerequisites"
+                                    required></textarea>
+                            </div>
+                        </div>
+                        <!--learning outcome-->
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="learningOutcomeInput">Learning outcome</label>
+                                <textarea class="form-control" id="learningOutcomeInput" rows="8"
+                                    placeholder="What will the students learn from this course?" name="learningOutcome"
+                                    required></textarea>
+                            </div>
+                        </div>
+                        <!--content-->
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="contentInput">Content</label>
+                                <textarea class="form-control" id="contentInput" rows="8"
+                                    placeholder="What are the contents of the course?" name="content"
+                                    required></textarea>
+                            </div>
+                        </div>
+                        <!--learning activities-->
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="learningActivitiesInput">Learning activities</label>
+                                <textarea class="form-control" id="learningActivitiesInput" rows="8"
+                                    placeholder="What are some of the learning activities of the course?"
+                                    name="learningActivities" required></textarea>
+                            </div>
+                        </div>
+                        <!--Exam form-->
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="examFormInput">Exam form</label>
+                                <textarea class="form-control" id="examFormInput" rows="8"
+                                    placeholder="What will the exam be like?" name="examForm" required></textarea>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button type="submit" class="btn btn-primary">Create</button>
+
+        </form>
+
+    </div>
 
     <!--Footer fragment-->
     <div th:insert="fragments/footer :: footer"></div>
@@ -24,4 +221,5 @@
     <!--Bootstrap, jQuery popper scripts-->
     <div th:insert="fragments/scripts :: scripts"></div>
 </body>
+
 </html>

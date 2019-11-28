@@ -6,7 +6,7 @@ import org.springframework.stereotype.Controller;
  * CourseController
  */
 @Controller
-public class CourseController 
+public class Course2Controller 
 {
     
 }
